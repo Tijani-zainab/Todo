@@ -1,4 +1,4 @@
-/*
+
 // This is the array that will hold the todo list items
 
 let todoItems = [];
@@ -48,12 +48,7 @@ function addTodo(text) {
 }  
 
 function toggleDone(key) {
-  // findIndex is an array method that returns the position of an element
-  // in the array.
   const index = todoItems.findIndex(item => item.id === Number(key));
-  // Locate the todo item in the todoItems array and set its checked
-  // property to the opposite. That means, `true` will become `false` and vice
-  // versa.
   todoItems[index].checked = !todoItems[index].checked;
   renderTodo(todoItems[index]);
 }
@@ -109,7 +104,7 @@ list.addEventListener('click', event => {
   }
 
 });
-*/
+
 
 
 
