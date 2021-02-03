@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+@font-face {
+    font-family: YuseiMagic;
+	src: url("../fonts/YuseiMagic-Regular.ttf");
+}
+
+body {
+    margin: 0;
+    font-family: YuseiMagic;
+    line-height: 1.4;
+}
+
+.main {
+    background-color: #424874;
+    color: #ffffff;
+    padding: 7% 20%;
+    height: 100vh;
+    text-align: center;
+}
+
+.main-header {
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+hr {
+    width: 50%;
+    border: 2px solid white;
+}
+
+.empty-state {
+    padding-top: 5%;
+}
+
+.empty-state ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+.js-form input{
+    padding: 2% 3%;
+    outline: none;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.tick {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+  
+.tick::before {
+    content: '✓';
+    font-size: 10px;
+    display: none;
+}
+  
+.done .tick::before {
+    display: inline;
+}
+ 
+#todo.id {
+    margin: 0 5%;
+}
+
+
+@media only screen and (max-width: 360px) {
+    /* For mobile phones: */
+
+    .main {
+        background-color: #424874;
+        color: #ffffff;
+        padding: 10% 15%;
+        text-align: unset;
+    }
+
+    .main-header {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .main-header h1 {
+        padding: 0 5%;
+    }
+
+    hr {
+        width: 100%;
+        border: 2px solid white dashed;
+    }
+
+    .js-form input{
+        padding: 5% 15%;
+    }
+   
+}  
+
+
+
+
+
+
+
+
+
+
+
+
+
