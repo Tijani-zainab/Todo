@@ -69,7 +69,6 @@ function deleteTodo(key) {
 }
 
 
-
 const form = document.querySelector('.js-form');
 
 // Add a submit event listener
@@ -107,7 +106,6 @@ list.addEventListener('click', event => {
 
 
 
-
 /*var Person = function(name,birth, job) {
   this.name = name;
   this.birth = birth;
@@ -133,4 +131,53 @@ ola.calculateAge();
 console.log(joseph.lastName);
 console.log(sam.lastName);
 console.log(ola.lastName);
+*/
+
+
+/*
+var weather;
+
+function setut() {
+  createCanvas(400, 200);
+  loadJSON('http://api.openweathermap.org/data/2.5/weather?q=lagos&appid=1d99a787ffd8a8d0cd76ad7ce2cdf808&unit=metric');
+}
+
+function gotData(data) {
+  // println(data);
+  weather = data;
+}
+
+function draw() {
+  background(0); 
+  if(weather) {
+    ellipse(100, 100, weather.main.temp, weather.main.temp);
+    ellipse(300, 100, weather.main.humidity, weather.main.humidity);
+  }
+}
+
+
+
+/*
+fetch('https://reqres.in/api/users')
+.then(res => res.json())
+.then(res => console.log(res))
+.then(res => {
+  if (res.ok)
+  console.log('success')
+} else {
+  console.log('Not sucessful')
+}
+
+})
+.then(data => console.log(data))
+.catch(error => console.log('Error'));
+*/  
+
+
+/*
+var retirement = function(year) {
+  console.log(70 - (2021 - year));
+} 
+
+retirement(2000);
 */
