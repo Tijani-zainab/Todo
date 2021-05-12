@@ -7,9 +7,7 @@ function renderTodo(todo) {
   const list = document.querySelector('.js-todo-list');
   const item = document.querySelector(`[data-key='${todo.id}']`);
 
-  // add this if block
   if (todo.deleted) {
-    // remove the item from the DOM
     item.remove();
     return
   }
@@ -55,15 +53,11 @@ function toggleDone(key) {
 
 
 function deleteTodo(key) {
-  // find the corresponding todo object in the todoItems array
   const index = todoItems.findIndex(item => item.id === Number(key));
-  // Create a new object with properties of the current todo item
-  // and a `deleted` property which is set to true
   const todo = {
     deleted: true,
     ...todoItems[index]
   };
-  // remove the todo item from the array by filtering it out
   todoItems = todoItems.filter(item => item.id !== Number(key));
   renderTodo(todo);
 }
@@ -71,14 +65,10 @@ function deleteTodo(key) {
 
 const form = document.querySelector('.js-form');
 
-// Add a submit event listener
 form.addEventListener('submit', event => {
-  // prevent page refresh on form submission
   event.preventDefault();
-  // select the text input
   const input = document.querySelector('.js-todo-input');
 
-  // Get the value of the input and remove whitespace
   const text = input.value.trim();
   if (text !== '') {
     addTodo(text);
@@ -87,24 +77,20 @@ form.addEventListener('submit', event => {
   }
 });
 
-// Select the entire list
+
 const list = document.querySelector('.js-todo-list');
-// Add a click event listener to the list and its children
 list.addEventListener('click', event => {
   if (event.target.classList.contains('js-tick')) {
     const itemKey = event.target.parentElement.dataset.key;
     toggleDone(itemKey);
   }
 
-  // add this `if` block
   if (event.target.classList.contains('js-delete-todo')) {
     const itemKey = event.target.parentElement.dataset.key;
     deleteTodo(itemKey);
   }
 
 });
-
-
 
 /*var Person = function(name,birth, job) {
   this.name = name;
@@ -124,7 +110,7 @@ var joseph = new Person('joseph', 1990, 'designer');
 var sam = new Person('Sam', '1980', 'teacher');
 var ola = new Person('Sam', '1940', 'retired');
 
-joseph.calculateAge();
+// joseph.calculateAge();
 sam.calculateAge();
 ola.calculateAge();
 
